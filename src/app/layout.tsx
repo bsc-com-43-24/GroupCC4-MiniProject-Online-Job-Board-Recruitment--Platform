@@ -1,4 +1,5 @@
 import { AntdRegistry } from '@ant-design/nextjs-registry';
+import AppShell from '@/components/AppShell';
 
 export default function RootLayout({
   children,
@@ -7,8 +8,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <AntdRegistry>{children}</AntdRegistry>
+      <body style={{ margin: 0 }}>
+        <AntdRegistry>
+          <AppShell>{children}</AppShell>
+        </AntdRegistry>
       </body>
     </html>
   );
